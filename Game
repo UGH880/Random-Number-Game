@@ -1,0 +1,28 @@
+import random
+def game():
+    a = random.randint(1,100)
+    x=1
+    c = 0
+    while x == 1:
+
+        y = int(input("Please guess a number from 1-100"))
+
+        if y == a:
+            x=2
+            print('congrats you have guessed the correct number, it took you' ,c, 'tries')
+            c = input("Would you like to play again?")
+            if c == ("yes" or "Yes" or "YES"):
+                game()
+            else:
+                quit()
+        elif y > a:
+            print ("Lower")
+            c = c+1
+        elif y < a:
+            print ("Higher")
+            c = c+1
+        else:
+            print('please enter a valid responce')
+
+game()
+
